@@ -33,7 +33,7 @@ int main()
     // read the input from the console and store it in the name array
     std::cin >> std::setw(20) >> name; // setw(20) is used to limit the input to 20 characters (set width of the stream to 20)
     // send the string into the output stream (console)
-    std::cout << "Bonjour Palluche La Falluche !" << std::endl;
+    std::cout << "Bonjour " << name << "!" << std::endl;
 
     return 0;
 }
