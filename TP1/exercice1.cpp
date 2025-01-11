@@ -14,10 +14,10 @@ OK
 
 5. Lancez le programme et passez-lui un très long nom (au moins 20 caractères). Que se passe-t-il ?
 Quelle classe de la librairie standard faudrait-il utiliser à la place du tableau de `char` pour stocker le nom de l'utilisateur ?
-
+On doit utilsier std::string car les std::string sont dynamiques et peuvent être redimensionnées automatiquement.
 
 6. Modifiez le programme afin de réaliser ce changement. Testez et commitez vos modifications.
-
+OK
 
 7. Prenez note des difficultés que vous avez rencontrées durant cet exercice et de comment vous les avez surmontées.
 */
@@ -29,9 +29,9 @@ int main()
     // send the string into the output stream (console)
     std::cout << "Entre ton nom: ";
     // create a char array of 20 elements and initialize it with an empty string
-    char name[20] = "";
+    std::string name;
     // read the input from the console and store it in the name array
-    std::cin >> std::setw(20) >> name; // setw(20) is used to limit the input to 20 characters (set width of the stream to 20)
+    std::cin >> name; // no need for std::setw because std::string is dynamic + std::cin stops at the first whitespace
     // send the string into the output stream (console)
     std::cout << "Bonjour " << name << "!" << std::endl;
 
